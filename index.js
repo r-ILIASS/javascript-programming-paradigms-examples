@@ -1,5 +1,17 @@
 "use strict";
 
-import { atm } from "./atm.js";
+import { atm as atmOne } from "./atm_procedural.js";
+import ATM from "./atm_oop.js";
 
-atm(4453.223);
+console.log(
+    "############################ ATM ONE (PROCEDURAL) ##############################"
+);
+atmOne(4453.223);
+
+console.log("");
+console.log("");
+console.log(
+    "############################ ATM TWO (OOP) ##############################"
+);
+
+new ATM(551.234322423).run();

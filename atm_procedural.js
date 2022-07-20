@@ -4,7 +4,6 @@
  * @toWithdraw positive number between 0 and 99999
  */
 export function atm(toWithdraw) {
-    
     const available = 5000;
     const notesAvailable = [100, 50, 10, 5, 1];
     const notesToDispence = [];
@@ -13,7 +12,7 @@ export function atm(toWithdraw) {
 
     if ((toWithdraw <= 0 && toWithdraw < 99999) || !toWithdraw)
         throw Error("Provide a positive number");
-    console.log(`Amount to withdraw: ${toWithdraw}`);
+    console.log(`Amount to withdraw: ${toWithdraw.toFixed(2)}`);
 
     /*** check If we have enough in the machine */
     if (available >= toWithdraw) {
